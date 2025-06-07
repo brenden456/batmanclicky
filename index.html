@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JSFiddle 14sdmbox</title>
+
+  <style>
+    .center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#clicker {
+  color: red;
+  background: black;
+}
+body {
+  color: red;
+  background: black;
+}
+.ishidden {
+  display: none;
+}
+
+  </style>
+
+  
+</head>
+<body>
+  <!doctype html>
+<html>
+  <head> </head>
+  <body>
+    <div class="center">
+      <h1>batman clicker</h1>
+      <p id="counter">0</p>
+      <button id="clicker" onclick="clicker()">click button</button>
+    </div>
+    <div class="center">
+      <button id="upgrade1" onclick="upgrade()" class="ishidden">
+        2+ per click batterang all points
+      </button>
+    </div>
+  </body>
+</html>
+
+
+  <script>
+    let clicks;
+let clickrate = 1
+function clicker() {
+  clicks = Number(document.getElementById("counter").innerHTML)
+  clicks = clicks + clickrate
+  document.getElementById("counter").innerHTML = clicks
+  checkupgrade()
+}
+function checkupgrade() {
+/* console.log(clicks>=20, clicks); */
+  if (Number(document.getElementById("counter").innerHTML) >= 20) { 
+    document.getElementById("upgrade1").classList.remove("ishidden")
+  } else {
+    document.getElementById("upgrade1").classList.add("ishidden")
+  }
+}
+function upgrade() {
+  clickrate = clickrate + 2
+  clicks = clicks -20
+  document.getElementById("counter").innerHTML = clicks
+  checkupgrade()
+}
+
+  </script>
+</body>
+</html>
