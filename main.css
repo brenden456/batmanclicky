@@ -1,0 +1,19 @@
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#clicker {
+  color: red;
+  background: black;
+}
+
+body {
+  color: red;
+  background: black;
+}
+
+.ishidden {
+  display: none;
+}
