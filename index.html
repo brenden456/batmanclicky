@@ -6,29 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>JSFiddle 14sdmbox</title>
-
-  <style>
-    .center {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#clicker {
-  color: red;
-  background: black;
-}
-body {
-  color: red;
-  background: black;
-}
-.ishidden {
-  display: none;
-}
-
-  </style>
-
-  
+  <link href="css/main.css" rel="stylesheet">
 </head>
 <body>
   <!doctype html>
@@ -47,32 +25,6 @@ body {
     </div>
   </body>
 </html>
-
-
-  <script>
-    let clicks;
-let clickrate = 1
-function clicker() {
-  clicks = Number(document.getElementById("counter").innerHTML)
-  clicks = clicks + clickrate
-  document.getElementById("counter").innerHTML = clicks
-  checkupgrade()
-}
-function checkupgrade() {
-/* console.log(clicks>=20, clicks); */
-  if (Number(document.getElementById("counter").innerHTML) >= 20) { 
-    document.getElementById("upgrade1").classList.remove("ishidden")
-  } else {
-    document.getElementById("upgrade1").classList.add("ishidden")
-  }
-}
-function upgrade() {
-  clickrate = clickrate + 2
-  clicks = clicks -20
-  document.getElementById("counter").innerHTML = clicks
-  checkupgrade()
-}
-
-  </script>
+<script src="src/main.js"> </script>
 </body>
 </html>
